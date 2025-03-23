@@ -1,4 +1,4 @@
-
+import 'dotenv/config';
 // Get the necessary elements
 const sendButton = document.getElementById("send-user-prompt");
 const userPrompt = document.getElementById("user-prompt");

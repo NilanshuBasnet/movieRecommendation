@@ -30,7 +30,6 @@ sendButton.addEventListener("click", async () => {
   }
   // Clear the textarea after sending the prompt
   userPrompt.value = "";
-  userPrompt.placeholder = "Tell us what you like, and we'll find the perfect movie!"
   geminiResponse.textContent = "🤖 Generating response...";
   movieList.innerHTML = "";
 

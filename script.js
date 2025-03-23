@@ -1,3 +1,4 @@
+import 'dotenv/config';
 // Get the necessary elements
 const sendButton = document.getElementById("send-user-prompt");
 const userPrompt = document.getElementById("user-prompt");
@@ -29,6 +30,7 @@ sendButton.addEventListener("click", async () => {
   }
   // Clear the textarea after sending the prompt
   userPrompt.value = "";
+  userPrompt.placeholder = "Tell us what you like, and we'll find the perfect movie!"
   geminiResponse.textContent = "🤖 Generating response...";
   movieList.innerHTML = "";
 
@@ -37,7 +39,7 @@ sendButton.addEventListener("click", async () => {
   responseContainer.classList.remove("hidden");
 
   try {
-    const backendLink = "https://movierecommendation-be-g3rj.onrender.com";
+    const backendLink = process.env.BACKEND_URL;
     // Send the user input to the backend
     const response = await fetch(`${backendLink}/generate`, {
       method: "POST",

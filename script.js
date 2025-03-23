@@ -31,7 +31,7 @@ sendButton.addEventListener("click", async () => {
   responseContainer.classList.remove("hidden");
 
   try {
-    const backendLink = "process.env.BACKEND_URL";
+    const backendLink = process.env.BACKEND_URL;
     // Send the user input to the backend
     const response = await fetch(`${backendLink}/generate`, {
       method: "POST",

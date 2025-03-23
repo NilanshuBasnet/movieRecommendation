@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation App</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Anek+Gurmukhi:wght@100..800&family=Comfortaa:wght@300..700&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Inconsolata:wght@200..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+            /* Hide scrollbar while allowing scrolling */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none; /* Chrome, Safari */
+        }
+    </style>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3309/3309043.png" type="image/x-icon">
+</head>
+<body style="font-family: 'Ubuntu', sans-serif;">
+    <div class="h-screen bg-[radial-gradient(circle_at_50%_95%,#20392E,#0B1418,#01010A)] overflow-y-auto">
+        
+        <div id="home-container" class="flex h-2/3 flex-col p-4 justify-center items-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/3309/3309043.png" alt = "logo" class="h-20 w-20 mb-5">
+            <p class="text-sm font-medium sm:text-lg mb-1 text-[#F5F5F5]">Welcome to MovieMate</p>
+            <h1 class="text-white font-bold sm:text-3xl text-xl text-center mb-3">Struggling to find the perfect movie? </h1>
+            <p class="text-[#b5fed7] text-xs sm:w-1/2 text-center">Let our AI-powered recommendation system suggest the best movies and TV shows!<br>🎬✨ Let’s get started!</p>
+        </div>
+        
+        <!-- Response Section -->
+        <!-- This section will be hidden by default and will only be shown when the user sends a prompt. -->
+        <div id="response-container" class="flex items-center flex-col hidden">
+            <div class="items-center justify-center flex p-5 sticky top-0 bg-[#080E13] w-full">
+                <img src="https://cdn-icons-png.flaticon.com/512/3309/3309043.png" alt="logo" class="h-15"/>
+            </div>
+            <div class="bg-white p-5 rounded-lg sm:w-2/3 text-sm m-2">
+                <p id="gemini-response">🌟 This is an example response from Gemini!</p>
+                <div class = "flex items-center justify-center flex-wrap">
+
+                    <div class="rounded-lg overflow-hidden m-5 flex flex-col w-60 shadow-lg shadow-slate-600">
+                        <img src="//www.movieposters.com/cdn/shop/products/8bd32c6d0d37dd70d19476b6d68ad500_480x.progressive.jpg?v=1573591358" alt="Movie Poster" class="h-full" >
+                        <div class="bg-[#1E2939] items-center flex justify-center">
+                            <button class="text-white cursor-pointer font-semibold rounded-xl bg-[#50C878] hover:bg-[#6fe797] pt-2 pb-2 pl-4 pr-4 m-3 flex"><img src="   https://cdn-icons-png.flaticon.com/512/109/109197.png" alt="playIcon" class="h-5 mr-3 invert"/> Watch</button>
+                        </div>
+                    </div>
+
+                    
+                </div>
+    
+            </div>
+        </div>
+        
+        <!-- User Prompt Section -->
+        <div class="flex items-center justify-center h-1/3 p-4">
+            <div class="bg-green-200 p-4 rounded-xl bg-white/10 backdrop-blur-lg w-full sm:w-1/2 ">
+                <textarea id="user-prompt" class="w-full h-20 mb-2 text-sm text-slate-200 sm:h-10 placeholder-slate-400 p-3 rounded-lg resize-none overflow-auto scrollbar-hide outline-none" placeholder="Tell us what you like, and we'll find the perfect movie!"></textarea>
+                <div class="flex items-center">
+                    <a href="https://github.com/NilanshuBasnet" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="Github" class="h-6 mr-4 cursor-pointer transition-transform duration-300 hover:scale-115"/></a>
+                    <a href="https://www.linkedin.com/in/nilanshubasnet" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/4494/4494497.png" alt="LinkedIn" class="h-6 mr-4 cursor-pointer transition-transform duration-300 hover:scale-115"/></a>
+                    <a href=""><img src="https://cdn-icons-png.flaticon.com/512/281/281760.png" alt="Documentation" class="h-6 cursor-pointer transition-transform duration-300 hover:scale-115"/></a>
+        
+                    <button id="send-user-prompt" class=" cursor-pointer ml-auto bg-[#50C878] hover:bg-[#6fe797] px-4 py-2 rounded"><img src="https://cdn-icons-png.flaticon.com/512/54/54366.png" class="h-3 invert"/></button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

@@ -13,6 +13,13 @@ refreshLogo.addEventListener("click", () => {
   location.reload(); // Reload the page
 });
 
+// Add an event listener for the Enter key press on the document
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+      sendButton.click(); // Trigger the button's click event
+    }
+  });
+
 // Add an event listener to the send button
 sendButton.addEventListener("click", async () => {
   const prompt = userPrompt.value.trim();

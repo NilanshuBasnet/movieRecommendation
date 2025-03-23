@@ -59,9 +59,18 @@ Here are some snapshots of the app in action:
 
 - **Home Screen**: The beautiful welcome screen where you enter your movie preferences. 🌟
   ![image](https://github.com/user-attachments/assets/8c4ffb03-42a7-44c0-bc5b-47273b16e919)
+ 
+
 
 - **Recommendation Screen**: The list of your personalized movie recommendations, with movie posters and trailer buttons! 🍿
   ![image](https://github.com/user-attachments/assets/2d53d2bb-dc61-4992-aec0-8dbfb1abc434)
+
+- **Mobile View**
+
+  <img src="https://github.com/user-attachments/assets/6daa6f9d-cf46-47cf-817f-a39360fd7ff7" width="300" alt="Mobile View 1" />
+  
+  <img src="https://github.com/user-attachments/assets/6dbdfc6c-dcef-41ad-b110-7e48481603f1" width="300" alt="Mobile View 2" />
+
 
 - 
 

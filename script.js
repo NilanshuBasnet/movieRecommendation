@@ -38,7 +38,7 @@ sendButton.addEventListener("click", async () => {
   responseContainer.classList.remove("hidden");
 
   try {
-    const backendLink = "https://movierecommendation-be-g3rj.onrender.com";
+    const backendLink = "https://movie-recommendation-be.vercel.app";
     // Send the user input to the backend
     const response = await fetch(`${backendLink}/generate`, {
       method: "POST",
